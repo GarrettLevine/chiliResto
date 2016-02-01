@@ -1,0 +1,58 @@
+$blocks: aboutUs specials reservations services;
+
+@each $block in $blocks {
+	.#{$block} {
+	text-align: center;
+	&__wrapper {
+		@extend %margin--auto;
+
+		@include mq(medium) {
+			max-width: 60rem
+		}
+
+		@include mq(large) {
+			max-width: $max-width;
+			margin: 8rem auto;
+		}
+	}
+	&__textContainer {
+		padding: 5rem 1.5rem;
+
+		@include mq(large) {
+			float: left;
+			width: 50%;
+		}
+
+		h2, p{
+			margin: 0;
+			letter-spacing: 1.6;
+		}
+	}
+
+	&__imageContainer {
+		width: 80%;
+		margin: 0 auto;
+		padding-bottom: 3rem;
+
+		@include mq(large) {
+			float: left;
+			width: calc(50% - 2rem);
+			margin-left: 2rem;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__heading {
+		font-size: 4rem;
+		letter-spacing: 2px;
+		font-family: $font-family--cursive;
+	}
+
+	&__subHeading {
+		padding-top: 1.7rem;
+	}
+	}
+}

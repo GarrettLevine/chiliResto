@@ -1,0 +1,86 @@
+.specials {
+	background-color: $grey;;
+	//CUTLERY IMAGE
+	@include background-image(url(../assets/homePage/cutlery.png));
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
+
+	padding: 5rem 0 23rem 0;
+
+	@include mq(large) {
+		background-size: 85%;
+	}
+
+
+	&__textContainer {
+		@extend %margin--auto;
+
+		@include mq(large) {
+			width: 33.3%;
+			padding-top: 0;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__buttonContainer {
+		padding-bottom: 6rem;
+		@include mq(large) {
+			position: relative;
+			bottom: -8rem;
+		}
+	}
+
+	&__menuButton {
+		@include responsive-button;
+	}
+
+	&__wrapper {
+		@include mq(large) {
+			position: relative;
+			@include background-image(url(../assets/homePage/specials-border.png));
+			background-repeat: no-repeat;
+			background-size: 100%;
+
+			padding: 13rem 9rem;
+			margin-top: 5rem;
+		}
+	}
+	&__heading {
+		@include mq(large) {
+			position: relative;
+			margin: 0;
+			top: -14rem;
+			font-size: 5rem;
+		}
+	}
+}
+
+.textContainer {
+	&__heading {
+		text-transform: uppercase;
+		font-size: 1.9rem;
+		letter-spacing: 1.5px;
+		margin: 0;
+	}
+
+	&__specialsItem {
+		text-align: left;
+		font-weight: 300;
+		padding: 3rem 1.5rem;
+		font-size: 2rem;
+	}
+}
+
+.specialsItem {
+	&__food {
+		float: left;
+	}
+
+	&__price {
+		float: right;
+	}
+}
+
+
+

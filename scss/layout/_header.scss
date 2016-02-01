@@ -1,0 +1,203 @@
+.header {
+	color: $grey;
+	text-align: center;
+
+	&__stickyDiv {
+		position: fixed;
+		width: 100%;
+		z-index: 100;
+	}
+	
+	&--main {
+		@include background-image(url(../assets/chilliHeroImage.jpg));
+		background-size: cover;
+	}
+
+	&--events,
+	&--menu {
+		@include background-image(url(../assets/headerImages/header-background.jpg));
+		background-size: cover;
+	}
+
+	&__headerContainer {
+		background-color: black;
+		padding: 1rem;
+
+		@include mq(large) {
+			background-color: rgba(0,0,0, 0.5);
+		}
+	}
+}
+
+.stickyDiv__container {
+	background: black;
+}
+
+.stickyDiv__wrapper {
+	max-width: 1170px;
+	margin: auto;
+}
+
+.imageContainer__mainImage {
+	padding: 7rem 0;
+}
+
+.stickyDiv {
+
+	 &__welcomeBar {
+	 	display: none;
+
+		background-color: black;
+		font-size: 0.8rem;
+
+		@include mq(large) {
+			display: block;
+		}
+	 }
+}
+
+.searchForm__searchBar {
+	background-color: lighten($black, 10%);
+	border: 1px solid lighten($black, 5%);	
+	margin-top: 1rem;
+}
+
+.welcomeBar {
+	 &__container {
+	 	color: $footer-grey-color;
+	 	max-width: $max-width;
+		margin: auto;
+
+	 	font-size: 1rem;
+
+	 	&--heading {
+	 		float: left;
+	 	}
+
+	 	a {
+	 			display: block;
+	 			padding: 1rem;
+	 			color: $footer-grey-color;
+
+	 			&:hover {
+	 				color: $primary-color;
+	 				transition: .5s;
+	 			}
+	 	}
+	 }
+
+	 &__infoContainer {
+	 	float: right;
+	 	padding-top: 1rem;
+	 	width: 28%;
+	 }
+
+	 &__link {
+	 	float: left;
+		position: relative;
+		font-size: 0.8rem;
+		width: calc(40% - 1rem);
+		margin-right: 1rem;
+		padding-top: 1.2rem;
+
+		&:last-child{
+			width: 20%;
+			margin-right: 0;
+		}
+
+	 	&--telephone::before {
+				content: url(../assets/top-nav/icon-phone.png);
+				@extend %header-icon-placing;
+				left: 3%;
+		}
+		&--email::before {
+			content: url(../assets/top-nav/icon-email.png);
+			@extend %header-icon-placing;
+			left: -1.5rem;
+
+		}
+		// &--search::before {
+		// 	content: url(../assets/top-nav/icon-magnifying-glass.png);
+		// 	@extend %header-icon-placing;
+	 // 	}
+		}
+
+		&__welcomePara {
+			float: left;
+			margin: 0;
+			padding: 1.5rem;
+			padding-left: 0;
+			font-size: 0.8rem;
+		}
+}
+
+
+.headerContainer {
+	padding: 2rem;
+	&__logoContainer {
+		@extend %float--left;
+		@include size(10rem 3.5rem);
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__headerWrapper {
+		max-width: $max-width;
+		margin: auto;
+	}
+
+	&__nav {
+		// @extend %float--right;
+		// width: 20%;
+		// text-transform: uppercase;
+
+		a {
+			// display: block;
+			// padding: 0.3rem;
+			// border-bottom: 2px solid transparent;
+			// &:hover {
+	 	// 			border-bottom: 2px solid $white;
+	 	// 			transition: .5s;
+	 	// 		}
+		}
+	}
+}
+
+$page-list: events, menu;
+
+@each $page in $page-list {
+	.#{$page} {
+	&__header {
+		padding-top: 12rem;
+	}
+	&__headerText {
+		padding-bottom: 2.5rem;
+	}
+	&__heading {
+		font-size: 4.8rem;
+		letter-spacing: 1.6px;
+		margin: 0;
+		padding-top: 2rem;
+		position: relative;
+
+		&::after {
+			content: url(../assets/headerImages/heading-underlineWhite.png);
+			@include size(100% 2.5rem);
+			display: block;
+			position: relative;
+			bottom: 2.7rem;
+			left: 0;
+		}
+
+	}
+	&__subHeading {
+		font-size: 1.6rem;
+	}
+	}
+}
+
+.events__heading:after {
+	top: 0;
+}

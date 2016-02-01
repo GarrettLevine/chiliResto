@@ -1,0 +1,121 @@
+.eventsArea {
+	&__wrapper {
+		max-width: 83.5rem;
+		margin: auto;
+	}
+
+	&__eventsContainer {
+		padding: 8rem 0 6rem;
+	}
+
+	&__headingContainer {
+		text-align: center;
+	}
+}
+
+.eventsContainer{
+	&__imageContainer {
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__heading {
+		font-family: $font-family--primary;
+		font-size: 2.8rem;
+	}
+
+	&__subheading {
+		font-size: 1.6rem;
+		font-weight: 300;
+
+		&::after {
+			content: url(../assets/headerImages/heading-underlineBlack.png);
+			display: block;
+			height: 2.5rem;
+			width: 100%;
+			padding-top: 1.5rem;
+			padding-bottom: 4rem;
+		}
+
+		&--time {
+			&::before {
+				content: url(../assets/eventsPage/icon-eventClock.png);
+				@extend %events-subHeader-icon;
+			}
+		}
+
+		&--date {
+			&::before {
+				content: url(../assets/eventsPage/icon-eventDate.png);
+				@extend %events-subHeader-icon;
+			}
+		}
+
+		&--location {
+			&::before {
+				content: url(../assets/eventsPage/icon-eventPin.png);
+				@extend %events-subHeader-icon;
+			}
+		}
+	}
+
+	&__descriptionContainer {
+		text-align: center;
+		padding: 1.6rem;
+
+		@include mq(large) {
+			padding: 0;
+		}
+		p {
+			line-height: 1.6;
+
+		}
+
+		&::after {
+			content: url(../assets/headerImages/heading-underlineBlack.png);
+			display: block;
+			height: 2.5rem;
+			width: 100%;
+			padding-top: 3rem;
+			padding-bottom: 4rem;
+		}
+	}
+
+	&__mapContainer {
+		width: 100%;
+		padding: 1.6rem;
+
+		@include mq(large) {
+			padding: 0;	
+		}
+
+		iframe {
+			width: 100%;
+			height: 31rem;
+		}
+	}
+
+	&__buttonContainer {
+		padding: 3rem 1.6rem 0;
+		@include mq(large) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+.buttonContainer {
+	&__eventsButtons {
+		@include responsive-button;
+
+		&--prev {
+			float: left;
+		}
+
+		&--next {
+			float: right;
+		}
+	}
+}

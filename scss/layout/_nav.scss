@@ -1,0 +1,37 @@
+.headerContainer__nav {
+	width: 50%;
+	@extend %float--right;
+	text-transform: uppercase;
+
+	@include mq(large) {
+		width: 20%;
+	}
+
+	&--desktop{
+		display: none;
+		@include mq(large) {
+			display: block;
+		}
+	}
+}
+
+.nav {
+	&__items {
+		@extend %float--left;
+		width: 30%;
+		display: block;
+		padding: 1rem;
+		border-bottom: 2px solid transparent;
+		margin: 0;
+		&:hover {
+			border-bottom: 2px solid $white;
+			transition: .5s;
+		}
+	}
+}
+
+.nav__items--selected {
+	a {
+		color: $primary-color;
+	}
+}

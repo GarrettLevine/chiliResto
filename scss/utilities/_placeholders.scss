@@ -1,0 +1,116 @@
+//******************************************************************
+//  POSITIONG PLACEHOLDER
+//******************************************************************
+
+%float--left {
+	float: left;
+}
+
+%float--right {
+	float: right;
+}
+
+%display--inline-block {
+	display: inline-block;
+}
+
+%margin--auto {
+	margin: 0 auto;
+}
+
+//******************************************************************
+//  ICON PLACEHOLDER
+//******************************************************************
+
+%white-star-placing {
+		content: "";
+		display: block;
+
+		@include size(2rem);
+		
+		background: url(../assets/homePage/white-star.png) no-repeat;
+		background-size: 75%;
+
+		position: relative;
+		top: -1.6rem;
+}
+
+%header-icon-placing {
+	@include size(1rem);
+	display: block;
+	position: absolute;
+	top: 0.9rem;
+}
+
+%subHeader-bar-placing {
+	display: block;
+	@include size(100% auto);
+	padding-bottom: 2rem;
+}
+
+%footer-social-icon {
+	@include size(1rem);
+	display: block;
+	position: relative;
+	left: 17px;
+	top: 15px;
+}
+
+%events-subHeader-icon {
+	display: inline-block;
+	padding: 1.5rem 1rem;
+}
+
+//******************************************************************
+//  STYLE PLACEHOLDER
+//******************************************************************
+
+%box-shadow {
+	box-shadow: 2px 2px 4px #ddd;
+}
+
+%box-shadow-hover {
+	box-shadow: 3px 3px 6px #bbb;
+}
+
+%input-style {
+	color: $black;
+	margin-top: 1.4rem;
+	padding: 1rem;
+	font-size: 1.8rem;
+	font-style: italic;
+	border-radius: 2px;
+	border: 2px solid $grey;
+}
+
+%input-focus-style {
+	outline: none;
+	border: 2px solid $primary-color;
+}
+
+//******************************************************************
+//  BUTTON PLACEHOLDER
+//******************************************************************
+
+%standard-button {
+	@include size(125px auto);
+	@extend %margin--auto; 
+
+	padding: 1.5rem;
+
+	background-color: $grey;
+	border: 2px solid $black;
+	color: $black;
+
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	transition: all .5s;
+}
+
+%standard-button--hover {
+	background-color: $primary-color;
+	color: white;
+	border: none;
+}
+

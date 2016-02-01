@@ -1,0 +1,110 @@
+.header__imageContainer {
+	@extend %margin--auto;
+	max-width: 28rem;
+	padding: 16rem 0 3rem 0;
+
+	color: $white;
+
+	@include mq(medium) {
+		max-width: 60rem;
+	}
+
+	h1 {
+		font-size: rem(30px);
+		padding-top: 2rem;
+		font-family: $font-family--cursive;
+		letter-spacing: 0.4rem;
+		margin: 0;
+		@include mq(medium) {
+			font-size: 3.5rem;
+		}
+
+		@include mq(large) {
+			font-size: 5rem;
+		}
+	}
+}
+
+.mainImage__subHeadings {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.subHeadings {
+	&__text {
+		@extend %float--left;
+		position: relative;
+		width: 33%;
+		padding: 2em;
+		text-transform: uppercase;
+		font-size: rem(15px);
+
+		@include mq(medium) {
+			font-size: 1.8rem;
+			padding: 0;
+		}
+	}
+
+	&__text:first-child {
+		padding-left: 0;
+	}
+
+	&__text:last-child {
+		padding-right: 0;
+	}
+}
+.subHeadings__text:first-child::before,
+.subHeadings__text:last-child::after {
+	@include size(3.5rem 0.1rem);
+	background-color: $white;
+	content: "";
+	position: relative;
+	display: block;
+}	
+
+.subHeadings__text:first-child::before {
+	right: 4.3rem;
+	top: 0.5rem;
+
+	@include mq(medium) {
+		right: 0;
+		top: 1rem;
+	}
+}
+
+.subHeadings__text:last-child::after  {
+	right: -9rem;
+	top: -0.6rem;
+
+	@include mq(medium) {
+		right: -18.2rem;
+		top: -1.2rem;
+	}
+}
+
+.subHeadings__text:first-child::after {
+	@extend %white-star-placing;
+	left: 8.5rem;
+	@include mq(medium) {
+		left: 18.5rem;
+		top: -2rem;
+	}
+}
+
+.subHeadings__text:nth-child(2)::after {
+	@extend %white-star-placing;
+	left: 6.5rem;
+	@include mq(medium) {
+		left: 17.2rem;
+		top: -2rem;
+	}
+}
+
+img[src="assets/homePage/silver-spring.png"] {
+	padding-bottom: 2rem;
+}
+
+.imageContainer__mainImage {
+	padding-bottom: 15rem 0;
+}

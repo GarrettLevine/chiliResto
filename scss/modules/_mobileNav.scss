@@ -1,0 +1,50 @@
+.headerContainer {
+	&__nav {
+		input[type=checkbox] {
+			display: none;
+		}
+
+		label {
+			float: right;
+			padding: 1.8rem;
+			transform: scale(3,3);
+
+			&:hover {
+				color: $primary-color;
+			}
+
+			@include mq(large) {
+				display: none;
+			}
+		}
+	}
+}
+
+.navMobile {
+	background-color: rgba(0,0,0, .95);
+	height: 100vh;
+	position: fixed;
+	top: 45px;
+	bottom: 0;
+	left: 400vh;
+	right: 0;
+	transition: all .5s;
+
+	&__item {
+		a {
+			display: block;
+			padding: 5rem;
+			font-size: 3.2rem;
+			transition: all .5s;
+			border-bottom: 3px solid white;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+}
+
+.mobileNav__checkbox:checked + .navMobile {
+	left: 0;
+}

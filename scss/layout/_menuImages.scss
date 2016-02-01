@@ -1,0 +1,41 @@
+$menu-image-area: breakfast, lunch, dinner, wine;
+
+@each $menuArea in $menu-image-area {
+.#{$menuArea}Menu__ImageArea{
+		padding: 0;
+		margin: 0;
+	}
+	.#{$menuArea}ImageArea {
+		&__imageContainer {
+			float: left;
+			width: 50%;
+
+			img {
+				width: 100%;
+			}
+
+			@include mq(large) {
+				width: 25%;
+			}
+
+			&:first-child {
+				@include mq(medium) {
+					display: black;
+				}
+			}
+
+			&:first-child,
+			&:last-child {
+				display: none;
+
+				@include mq(large) {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.wineMenu__ImageArea {
+	margin-bottom: -5px;
+}

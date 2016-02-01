@@ -1,0 +1,276 @@
+.footer {
+	margin-top: 0;
+	&__welcomeContainer {
+		@include background(url(../assets/headerImages/header-background.jpg));
+		color: $white;
+	}
+
+	&__textContainer {
+		text-align: center;
+		padding: 5rem 1.5rem;
+
+		p {
+		line-height: 1.6;
+
+		@include mq(large) {	
+			width: 50%;
+			margin: auto;
+		}
+	}
+
+	&__footerInfoArea {
+		text-align: left;
+
+		background-color: $black;
+		color: $footer-grey-color;
+	} 
+	&__mediaContainer {
+		background: #242424;
+		p {
+			color: $footer-grey-color;
+			margin: 0;
+		}
+	}
+}
+
+.footer__storeInfo {
+	background-color: $black;
+}
+
+.footer__mediaContainer {
+	background: #242424;
+	p{
+		margin: 0;
+	}
+}
+.welcomeContainer {
+	&__logoContainer {
+		@extend %margin--auto;
+		width: 40%;
+
+		@include mq(large) {
+			width: 12%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__heading {
+		text-transform: uppercase;
+		font-size: 2.1rem;
+	}
+	
+	}
+}
+
+.footerInfoArea {
+	&__infoContainer {
+		background-color: $black;
+		padding-bottom: 1rem;
+		@include mq(large) {
+			float: left;
+			width: 33.33%;
+		}
+
+		&--newsletter {
+			padding-bottom: 7rem;
+			input {
+				
+			}
+			@include mq(large) {
+				// padding-bottom: 15.4rem;
+			}
+		}
+
+		&--hours {
+			@include mq(large) {
+				// padding-bottom: 8.1rem;
+			}
+		}
+
+		
+		p, a {
+			color: $footer-grey-color;
+			line-height: 1.6;
+		}
+	}
+
+	&__wrapper {
+		max-width: 50rem;
+		margin: auto;
+
+		&:first-child {
+			padding: 0 1.6rem;
+		}
+	}
+}
+
+.newsletterForm__newsletterInput {
+	@extend %input-style;
+	width: 100%;
+	margin-top: 2rem;
+	position: relative;
+
+	&:focus {
+		@extend %input-focus-style;
+	}
+}
+
+.submitButton {
+	@include size(6.5rem 4.5rem);
+	
+	background: $primary-color;
+	background-image: url(../assets/footer/icon-arrow.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+
+	position: absolute;
+	right: 0;
+	bottom: 0;
+
+	transition: all 0.5s;
+
+	&:hover {
+		background-color: darken($primary-color, 8%);
+	}
+}
+
+.storeInfo {
+	
+	&__wrapper {
+		max-width: 1170px;
+		margin: auto;
+	}
+}
+
+.infoContainer {
+	&__hoursContainer {
+		@extend %margin--auto;;
+		font-size: 1.5rem;
+		line-height: 1.6;
+		
+		li {
+			display: block;
+			width: 100%;
+			padding: 2.25rem 0;
+		}
+	}
+
+	&__newsletterForm {
+		position: relative;
+	}
+	&__heading {
+		color: $white;
+		font-size: 2rem;
+		
+		padding-top: 3rem;
+
+		margin-bottom: 1.2rem;
+		margin-top: 0;
+	}
+
+	&__subHeading {
+		font-size: 1.2rem;
+		padding-top: 5rem;
+		color: $footer-grey-color;
+	}
+
+	&__day {
+		color: $footer-grey-color;
+		float: left;
+		width: 50%;
+		text-align: left;
+	}
+
+	&__time {
+		color: $white;
+		float: right;
+		width: 50%;
+		text-align: right;
+	}
+	&__address {
+		position: relative;
+		margin-left: 10%;
+
+		&:after {
+			content: url(../assets/footer/icon-footerPin.png);
+			display: block;
+			position: relative;
+			left: -2.5rem;
+			top: -5.3rem;
+			margin-bottom: 0;
+		}
+	}
+	&__phone {
+		position: relative;
+		margin-left: 10%;
+		&:after {
+			content: url(../assets/footer/icon-footerPhone.png);
+			display: block;
+			position: relative;
+			left: -2.5rem;
+			top: -2.7rem;
+			margin-bottom: 0;
+		}
+	}
+	&__email {
+		position: relative;
+		margin-left: 10%;
+		&:after {
+			content: url(../assets/footer/icon-footerEmail.png);
+			display: block;
+			position: relative;
+			left: -2.5rem;
+			top: -2.5rem;
+			margin-bottom: 0;
+		}
+	}
+}
+.copywrite {
+	font-size: 1rem;
+	text-align: center;
+	padding: 3rem;
+	color: #3D3D3D;
+}
+.agencyName {
+	font-weight: 700;
+	color: $white;
+}
+
+.mediaContainer__buttonContainer {
+	width: 234px;
+	padding: 1rem 0 3rem 0;
+	margin: auto;
+}
+
+.mediaButton {
+	float: left;
+	display: block;
+	@include size(4.5rem);
+	position: relative;
+	margin-left: 1.6rem;
+	border-radius: 50%;
+	background-color: #292929;
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	$social-list: facebook, twitter, gmail, pinterest;
+	@each $media in $social-list {
+		&--#{$media} {
+			transition: all .5s;
+			&::after {
+				@extend %footer-social-icon;
+				content: url(../assets/footer/social-#{$media}.png);
+				
+			}
+			&:hover {
+				background-color: $primary-color;
+			}
+		}
+	}
+}

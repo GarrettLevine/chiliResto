@@ -1,0 +1,33 @@
+.aboutUs {
+	p {
+		line-height: 1.6;
+	}
+
+	&__heading {
+		font-size: 5.2rem;
+	}
+
+	&__textContainer {
+		@include mq(large) {
+			width: 55%;
+		}
+		margin-top: 5.5rem;
+	}
+	&__subHeading {
+		padding-top: 0;
+		&::after {
+				content: url(../assets/headerImages/heading-underlineBlack.png);
+				@extend %subHeader-bar-placing;
+				padding-top: 1rem;
+				overflow: hidden;
+			}
+	}
+
+	&__imageContainer {
+		@include mq(large) {
+			width: 40%;
+		}
+		
+	}
+}
+
