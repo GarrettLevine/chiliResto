@@ -15,11 +15,11 @@ $font-url--googleCursive : "https://fonts.googleapis.com/css?family=Aguafina+Scr
 @import url($font-url--googleCursive);
 
 //Font Weight Presets
-$font-weight--thin       : 100;
-$font-weight--light      : 300;
-$font-weight--medium     : 400;
-$font-weight--bold       : 700;
-$font-weight--ultra-bold : 900;
+$font-weight--thin      		 : 100;
+$font-weight--light      		 : 300;
+$font-weight--medium        : 400;
+$font-weight--bold              : 700;
+$font-weight--ultra-bold      : 900;
 
 //Font Stacks
 $font-family--primary: 'Raleway', sans-serif;
@@ -29,7 +29,7 @@ $font-family--cursive: 'Aguafina Script', cursive;
 //==================================
 // DESCRIPTIVE BASE COLORS
 //==================================
-
+$primary-color: map-get(androidRed, 100);
 
 
 //==================================
