@@ -1411,7 +1411,7 @@ h6 {
   display: none; }
 .headerContainer__nav label {
   float: right;
-  padding: 1.8rem;
+  padding: 0.3rem;
   transform: scale(3, 3); }
   .headerContainer__nav label:hover {
     color: #FF5148; }
@@ -1488,6 +1488,10 @@ h6 {
   content: "";
   position: relative;
   display: block; }
+  @media (min-width: 1px) and (max-width: 720px) {
+    .subHeadings__text:first-child::before,
+    .subHeadings__text:last-child::after {
+      display: none; } }
 
 .subHeadings__text:first-child::before {
   right: 4.3rem;
@@ -1592,6 +1596,9 @@ img[src="assets/homePage/silver-spring.png"] {
   color: #FFF; }
   .reservations__heading::after {
     content: url(../assets/headerImages/heading-underlineWhite.png); }
+    @media (min-width: 1px) and (max-width: 720px) {
+      .reservations__heading::after {
+        display: none; } }
   .reservations__wrapper {
     margin-top: 0;
     margin-bottom: 0; }

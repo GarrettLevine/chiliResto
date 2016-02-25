@@ -9,6 +9,9 @@
 		&::after {
 			content: url(../assets/headerImages/heading-underlineWhite.png);
 			@extend %subHeader-bar-placing;
+			@include mq(small) {
+				display: none;
+			}
 		}
 	}
 	&__wrapper {

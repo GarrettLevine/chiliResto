@@ -61,6 +61,10 @@
 	content: "";
 	position: relative;
 	display: block;
+
+	@include mq(small) {
+		display: none;
+	}
 }	
 
 .subHeadings__text:first-child::before {
